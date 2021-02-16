@@ -11,5 +11,5 @@ include_directories(SFML_INCLUDE_DIR)
 
 find_package(SFML 2.5.1 COMPONENTS system window graphics network audio)
 
-add_executable(sfmltest main.cpp)
+add_executable(sfmltest src/main.cpp src/App.cpp src/App.h src/Game.cpp src/Game.h)
 target_link_libraries(sfmltest sfml-graphics sfml-window sfml-system)
