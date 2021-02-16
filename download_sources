@@ -1,0 +1,11 @@
+#!/bin/bash
+echo 'Downloading SFML sources...'
+curl -o sfml_sources.zip https://www.sfml-dev.org/files/SFML-2.5.1-sources.zip
+echo 'Cleaning up previously unpacked sources...'
+rm -rfv ./SFML-2.5.1
+rm -rfv ./SFML
+
+echo 'Unzipping sources...'
+unzip sfml_sources.zip
+echo 'Renaming to ./SFML'
+mv ./SFML-2.5.1 ./SFML
