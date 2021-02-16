@@ -34,11 +34,12 @@ Game::Game(sf::RenderWindow *window) {
 
 void Game::loop() {
     printf("Loop\n");
-    // window->draw(mousePosText);
+    window->draw(mousePosText);
+
     incrVal += 1;
     incr.setString(std::to_string(incrVal));
     window->draw(incr);
-    keyboardText.setString(keyboardLog);
+
     window->draw(keyboardText);
 }
 
@@ -68,7 +69,7 @@ void Game::keyboardMovement(sf::Keyboard::Key key) {
             break;
     }
     keyboardLog += keyStr;
-    // sf::String keysHistory = key
+    keyboardText.setString(keyboardLog);
 
 
 }

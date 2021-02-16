@@ -40,10 +40,10 @@ int App::main(){
                 this->rWindow->close();
                 return 0;
             }
-//            if(event.type == sf::Event::MouseMoved)
-//            {
-//                game->mouseMovement(event.mouseMove.x, event.mouseMove.y);
-//            }
+            if(event.type == sf::Event::MouseMoved)
+            {
+                game->mouseMovement(event.mouseMove.x, event.mouseMove.y);
+            }
             if(event.type == sf::Event::KeyPressed)
             {
                 game->keyboardMovement(event.key.code);
